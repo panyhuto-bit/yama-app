@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="#DDFFFFFF"
+        android:padding="12dp"
+        android:textColor="#111111"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="#BBFFFFFF"
+            android:paddingHorizontal="4dp"
+            android:text="出典：国土地理院"
+            android:textColor="#333333"
+            android:textSize="11sp" />
+
+        <HorizontalScrollView
+            android:id="@+id/mainBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EEFFFFFF">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <Button android:id="@+id/btnRec" style="@style/Widget.Material3.Button"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp" android:text="● 記録開始" />
+                <Button android:id="@+id/btnEdit" style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp" android:text="ルート作成" />
+                <Button android:id="@+id/btnRoute" style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp" android:text="ルート ▼" />
+                <Button android:id="@+id/btnHere" style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp" android:text="現在地" />
+                <Button android:id="@+id/btnCache" style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp" android:text="地図保存" />
+                <Button android:id="@+id/btnStamp" style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="スタンプ" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:id="@+id/editBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EEFFF3E0"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            android:visibility="gone">
+
+            <Button android:id="@+id/btnUndo" style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_marginEnd="4dp" android:text="1つ戻す" />
+            <Button android:id="@+id/btnClear" style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_marginEnd="4dp" android:text="全消去" />
+            <Button android:id="@+id/btnCancel" style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_marginEnd="4dp" android:text="やめる" />
+            <Button android:id="@+id/btnSave" style="@style/Widget.Material3.Button"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="保存" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
