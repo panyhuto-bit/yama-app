@@ -27,7 +27,7 @@ import kotlinx.coroutines.withContext
 import org.osmdroid.config.Configuration
 import org.osmdroid.events.MapEventsReceiver
 import org.osmdroid.tileprovider.cachemanager.CacheManager
-import org.osmdroid.tileprovider.tilesource.XYZTileSource
+import org.osmdroid.tileprovider.tilesource.XYTileSource
 import org.osmdroid.util.BoundingBox
 import org.osmdroid.util.GeoPoint
 import org.osmdroid.views.MapView
@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
     private var editMode = false
     private val editPts = ArrayList<GeoPoint>()
 
-    private val gsi = XYZTileSource(
+    private val gsi = XYTileSource(
         "GSI_STD", 5, 18, 256, ".png",
         arrayOf("https://cyberjapandata.gsi.go.jp/xyz/std/")
     )
